@@ -2,6 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LevelChangeSys;
+using UI;
+using UnityEngine.EventSystems;
 
 namespace MixerAddSystem
 {
@@ -17,14 +20,36 @@ namespace MixerAddSystem
 
         private float delay = 1f;
 
+        private int currentButtonIndex;
+
+        public static MixerIngridientManager MIMinstance;
+
         private void OnEnable()
         {
               MixerCoverEventManager.CoverOpenAction += SpawnTheIngrediet;
         }
 
-        private void SpawnTheIngrediet() { Instantiate(ingredients[0], spawnPoint.position, Quaternion.identity); }
+        private void Awake()
+        {
+            MIMinstance = this;
+        }
 
-        public void OnButtonClick() { StartCoroutine(StartMixerCoverAnim()); }
+        private void SpawnTheIngrediet() 
+        {
+            int gmObjIndex = LevelChangeSystem.LCSinstance.ingredientIndex[currentButtonIndex];
+
+            if (gmObjIndex < 0)
+                return;
+
+            Instantiate(ingredients[gmObjIndex], spawnPoint.position, Quaternion.identity); 
+        }
+
+        public void OnButtonClick()
+        {
+            currentButtonIndex = EventSystem.current.currentSelectedGameObject.GetComponent<IngridientsButtonSpriteChange>().buttonIndex;
+
+            StartCoroutine(StartMixerCoverAnim()); 
+        }
 
         private IEnumerator StartMixerCoverAnim()
         {
