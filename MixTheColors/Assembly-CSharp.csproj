@@ -56,8 +56,9 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\MixerSystem\AddTheIngredients.cs" />
-    <Compile Include="Assets\Scripts\MixerSystem\IngredientsDataBase.cs" />
+    <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\MixerCoverEventManager.cs" />
+    <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\MixerIngridientManager.cs" />
+    <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\IngridientAnimatorDisable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -663,6 +664,10 @@
       <Project>{EB262CAB-9CCD-25B3-1ED0-7F5972EA0529}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{E7F529EE-6427-1456-A7DB-79341530DDF3}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{8AA11169-C303-9B13-FFD6-0C410FEAC934}</Project>
       <Name>UnityEditor.UI</Name>
@@ -670,10 +675,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{5EC282C2-354A-7E42-3660-836F516A7590}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{E7F529EE-6427-1456-A7DB-79341530DDF3}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
