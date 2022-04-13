@@ -1,0 +1,176 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.32f1 (12f8b0834f07) revision 1243312'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 16181 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.32f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/WK/MixTheColors
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+63785
+Successfully changed project path to: D:/WK/MixTheColors
+D:/WK/MixTheColors
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 64.38 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.32f1 (12f8b0834f07)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/WK/MixTheColors/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 with Max-Q Design (ID=0x1ba1)
+    Vendor:   
+    VRAM:     8082 MB
+    Driver:   30.0.14.9649
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002965 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 61.16 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.009 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1009ms)
+		BeginReloadAssembly (101ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (787ms)
+			LoadAssemblies (98ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (257ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (297ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (61ms)
+				BeforeProcessingInitializeOnLoad (26ms)
+				ProcessInitializeOnLoadAttributes (152ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004481 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.699 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1700ms)
+		BeginReloadAssembly (247ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (1353ms)
+			LoadAssemblies (145ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (435ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (539ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (369ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 1.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1556 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.9 MB.
+System memory in use after: 73.0 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1995.
+Total: 4.469800 ms (FindLiveObjects: 0.181600 ms CreateObjectMapping: 0.077000 ms MarkObjects: 4.108800 ms  DeleteObjects: 0.101400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/PolygonOffice
+  artifactKey: Guid(6f9eb6336408a894ea22a36950365829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice using Guid(6f9eb6336408a894ea22a36950365829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d8a9c5f435682d652b273a76f93c17') in 0.010802 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.945291 seconds.
+  path: Assets/PolygonOffice/Prefabs
+  artifactKey: Guid(3d8645a255fe8694bb476bad5f461449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs using Guid(3d8645a255fe8694bb476bad5f461449) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd0b7d48d7d0d79b03c0e0b48f8ba771') in 0.008168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.188654 seconds.
+  path: Assets/PolygonOffice/Prefabs/Buildings
+  artifactKey: Guid(b6751f82ba82a3b44905cf30fbd4acbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs/Buildings using Guid(b6751f82ba82a3b44905cf30fbd4acbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5739fc21dbdbfab4f3b63c083d48b969') in 0.008491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.079568 seconds.
+  path: Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Floor_Tiles_01.prefab
+  artifactKey: Guid(8633d1fc084eee24383e522b8b29e723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Floor_Tiles_01.prefab using Guid(8633d1fc084eee24383e522b8b29e723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f59c92cdd0dd36412b546bfcf2c181e') in 0.160269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Wall_Baseboard_01.prefab
+  artifactKey: Guid(5a2b2aefafe7a2f4bb79271e2b6b2e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Wall_Baseboard_01.prefab using Guid(5a2b2aefafe7a2f4bb79271e2b6b2e62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5277653e66842344c1070f152d8be732') in 0.016583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Wall_Baseboard_Door_01.prefab
+  artifactKey: Guid(9bd21c6352a240b4486ab791c4744b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Wall_Baseboard_Door_01.prefab using Guid(9bd21c6352a240b4486ab791c4744b22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c73b31aaf807a03ba649fcc0d7bcc22d') in 0.018485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Pillar_Interior_01.prefab
+  artifactKey: Guid(7dec6b91453426943a71d5e29aee5e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonOffice/Prefabs/Buildings/SM_Bld_Pillar_Interior_01.prefab using Guid(7dec6b91453426943a71d5e29aee5e85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e987b7bc80775b5cfaee61479249802') in 0.016228 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
