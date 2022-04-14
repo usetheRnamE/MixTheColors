@@ -7,7 +7,8 @@ namespace LevelChangeSys
 {
     public class LevelChangeSystem : MonoBehaviour
     {
-        private  int levelCounter = 0;
+        [HideInInspector]
+        public  int levelCounter = 0;
 
         [HideInInspector]
         public int[] ingredientIndex;

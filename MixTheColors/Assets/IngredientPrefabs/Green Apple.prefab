@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 8178981247919238341}
   - component: {fileID: -4698483836162998930}
   m_Layer: 0
-  m_Name: Green Apple
-  m_TagString: Untagged
+  m_Name: green apple
+  m_TagString: Ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
