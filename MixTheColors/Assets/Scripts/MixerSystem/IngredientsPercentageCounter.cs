@@ -10,7 +10,7 @@ namespace MixerAddSystem
     {
         private const int ingredientsNum = 7, buttonNum = 3;
 
-        private int proportionValue = 2;
+        private float firstIngredientLocalPercentage, secondIngredientLocalPercentage, thirdIngredientLocalPercentage; 
 
         private List<GameObject>[] ingredients = new List<GameObject>[ingredientsNum];
 
@@ -18,7 +18,8 @@ namespace MixerAddSystem
 
         private int[] ingredientIndexes = new int[buttonNum];
 
-        private double firstLevelPercentage, secondLevelPercentage, thirdlevelPercentage;
+        private float levelPercentage, secondLevelPercentage, thirdlevelPercentage;
+        private float firstIngredientCurrentPercentage = 0, secondIngredientCurrentPercentage = 0, thirdIngredientCurrentPercentage = 0;
 
         public Animator blenderAnimator;
 
@@ -28,8 +29,6 @@ namespace MixerAddSystem
             {
                 ingredients[i] = new List<GameObject>();
             }
-
-
         }
 
         private void OnTriggerEnter(Collider other)
@@ -60,7 +59,7 @@ namespace MixerAddSystem
                         ingredients[6].Add(other.gameObject);
                         break;
                 }
-                //PercentageCounter();
+                PercentageCounter();
             }
         }
         private void PercentageCounter()
@@ -74,24 +73,28 @@ namespace MixerAddSystem
                 ingredientCounts[i] = ingredients[ingredientIndexes[i]].Count;
             }
 
-            int numOfLevel = LevelChangeSystem.LCSinstance.levelCounter;
+            if (ingredientIndexes[2] > 0) firstIngredientLocalPercentage = secondIngredientLocalPercentage = thirdIngredientLocalPercentage = 33.333f;
+            else firstIngredientLocalPercentage = secondIngredientLocalPercentage = 50;
 
-            switch (numOfLevel)
-            {
-                case 0:
-                    if ((float) ingredientCounts[0] / ingredientCounts[1] == proportionValue)
-                        firstLevelPercentage = 100;
-                    else firstLevelPercentage = Math.Abs(proportionValue - (float) ingredientCounts[0] / ingredientCounts[1]) * 100;
-                    break;
-                case 1:
-                    secondLevelPercentage = (double) ingredientCounts[0] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 4 * 100;
-                    break;
-                case 2:
-                    thirdlevelPercentage = (double) ingredientCounts[0] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 2 * 100;
-                    break;
-            }
-            Debug.Log(firstLevelPercentage + "%");
+             if (ingredientCounts[0] > 0)
+                    firstIngredientCurrentPercentage = Math.Abs(firstIngredientLocalPercentage - ((float)ingredientCounts[0] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
+
+              if(ingredientCounts[1] > 0)
+                    secondIngredientCurrentPercentage = Math.Abs(secondIngredientLocalPercentage - ((float)ingredientCounts[1] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
+
+              if (ingredientCounts[2] > 0)
+                   thirdIngredientCurrentPercentage = Math.Abs(thirdIngredientLocalPercentage - ((float)ingredientCounts[2] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
+
+            levelPercentage = 100 - (firstIngredientCurrentPercentage + secondIngredientCurrentPercentage + thirdIngredientCurrentPercentage);
+
+            if (levelPercentage >= 99.9)
+                levelPercentage = 100;
+
+            Debug.Log(levelPercentage + "%");
         }
+
+
+      //  private void Per
 
         public void Mixing()
         {

@@ -59,10 +59,13 @@
     <Compile Include="Assets\Scripts\LevelChangeSystem\LevelChangeSystem.cs" />
     <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\IngredientAnimatorDisable.cs" />
     <Compile Include="Assets\Scripts\UI\IngredientsButtonSpriteChange.cs" />
+    <Compile Include="Assets\Scripts\UI\ApplicationQuiter.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseSystem.cs" />
     <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\MixerCoverEventManager.cs" />
     <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\BlenderAnimationController.cs" />
     <Compile Include="Assets\Scripts\MixerSystem\IngredientsPercentageCounter.cs" />
     <Compile Include="Assets\Scripts\MixerSystem\IngridientsAdding\MixerIngredientManager.cs" />
+    <Compile Include="Assets\Scripts\UI\BlendTheMixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UIPack\Spritesheet\sheet_black1x.xml" />

@@ -7,8 +7,7 @@ namespace LevelChangeSys
 {
     public class LevelChangeSystem : MonoBehaviour
     {
-        [HideInInspector]
-        public  int levelCounter = 0;
+        private  int levelCounter = 0;
 
         [HideInInspector]
         public int[] ingredientIndex;
@@ -27,7 +26,7 @@ namespace LevelChangeSys
         private void Start()
         {
             ChangeLevel();
-          //  ButtonReset();
+            //ButtonReset();
         }
 
         private void ChangeLevel()
@@ -51,12 +50,12 @@ namespace LevelChangeSys
 
             ChangeLevelAction?.Invoke();
         }
-      /*  private void ButtonReset()
+        private void ButtonReset()
         {
             foreach (var button in buttons)
             {
                 button.SetActive(true);
             }
-        }*/
+        }
     }
 }

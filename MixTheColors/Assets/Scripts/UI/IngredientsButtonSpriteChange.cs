@@ -11,16 +11,16 @@ namespace UI
     {
         public int buttonIndex;
 
-        private Image spriteRen;  
+        private Image spriteImg;  
 
         private void OnEnable()
-        {
+        {      
             LevelChangeSystem.ChangeLevelAction += SpriteChange;
         }
 
         private void Awake()
         {
-            spriteRen = GetComponent<Image>();
+            spriteImg = GetComponent<Image>();
         }
 
         private void SpriteChange()
@@ -33,7 +33,7 @@ namespace UI
                 return;
             }
 
-            spriteRen.sprite = MixerIngredientManager.MIMinstance.ingredientSprites[spriteIndex]; // sets sprite by the following index
+            spriteImg.sprite = MixerIngredientManager.MIMinstance.ingredientSprites[spriteIndex]; // sets sprite by the following index
         }
 
         private void OnDisable()
