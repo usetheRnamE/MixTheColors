@@ -1,8 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LevelChangeSys;
+using UI;
 
 namespace MixerAddSystem
 {
@@ -18,13 +18,24 @@ namespace MixerAddSystem
 
         private int[] ingredientIndexes = new int[buttonNum];
 
-        private float levelPercentage, secondLevelPercentage, thirdlevelPercentage;
-        private float firstIngredientCurrentPercentage = 0, secondIngredientCurrentPercentage = 0, thirdIngredientCurrentPercentage = 0;
+        [HideInInspector]
+        public float levelPercentage;
 
-        public Animator blenderAnimator;
+        [HideInInspector]
+        public float firstIngredientCurrentPercentage = 0, secondIngredientCurrentPercentage = 0, thirdIngredientCurrentPercentage = 0;
+
+        public static IngredientsPercentageCounter IPCinstance;
+
+        private void OnEnable()
+        {
+            BlendTheMixture.BlendAction += DestroyAllObjectes;
+           // ReplayTheGame.ReloadTheGame += ResetTheValues;
+        }
 
         private void Awake()
         {
+            IPCinstance = this;
+
             for (int i = 0; i < 7; i++)
             {
                 ingredients[i] = new List<GameObject>();
@@ -74,31 +85,55 @@ namespace MixerAddSystem
             }
 
             if (ingredientIndexes[2] > 0) firstIngredientLocalPercentage = secondIngredientLocalPercentage = thirdIngredientLocalPercentage = 33.333f;
-            else firstIngredientLocalPercentage = secondIngredientLocalPercentage = 50;
+            else firstIngredientLocalPercentage = secondIngredientLocalPercentage = 49.9f;
 
              if (ingredientCounts[0] > 0)
                     firstIngredientCurrentPercentage = Math.Abs(firstIngredientLocalPercentage - ((float)ingredientCounts[0] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
 
-              if(ingredientCounts[1] > 0)
+             if(ingredientCounts[1] > 0)
                     secondIngredientCurrentPercentage = Math.Abs(secondIngredientLocalPercentage - ((float)ingredientCounts[1] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
 
-              if (ingredientCounts[2] > 0)
+             if (ingredientCounts[2] > 0)
                    thirdIngredientCurrentPercentage = Math.Abs(thirdIngredientLocalPercentage - ((float)ingredientCounts[2] / (ingredientCounts[2] + ingredientCounts[1] + ingredientCounts[0]) * 100));
 
             levelPercentage = 100 - (firstIngredientCurrentPercentage + secondIngredientCurrentPercentage + thirdIngredientCurrentPercentage);
 
-            if (levelPercentage >= 99.9)
+            if (levelPercentage >= 99.5)
                 levelPercentage = 100;
 
-            Debug.Log(levelPercentage + "%");
+        //    Debug.Log(levelPercentage + "%");
         }
 
 
-      //  private void Per
-
-        public void Mixing()
+        private void DestroyAllObjectes()
         {
+            for (int i = 0; i < ingredients.Length; i++)
+            {
+                foreach (var item in ingredients[i])
+                    Destroy(item, 1f);
+                 
+                ingredients[i].Clear();
 
+               // Debug.Log(ingredients[i].Count);
+            }
+
+            firstIngredientCurrentPercentage = 0;
+            secondIngredientCurrentPercentage = 0;  
+            thirdIngredientCurrentPercentage= 0;    
+        }
+
+      /*  private void ResetTheValues()
+        {
+            levelPercentage = 0;
+
+            ingredientCounts = new int[buttonNum];
+            ingredientIndexes = new int[buttonNum];
+        }*/
+
+        private void OnDisable()
+        {
+            BlendTheMixture.BlendAction -= DestroyAllObjectes;
+           // ReplayTheGame.ReloadTheGame -= ResetTheValues;
         }
     }
 }
